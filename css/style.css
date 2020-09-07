@@ -159,6 +159,12 @@ align-items: center;
   align-items: center; 
 }
 
+.contact-list-item .link,
+.contact-list-item .phone {
+  display: flex;
+  align-items: center; 
+}
+
 .contact-list-item:not(:last-child) {
  margin-right: 50px;
 }
