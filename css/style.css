@@ -358,8 +358,7 @@ margin-bottom: 20px;
   margin-left: auto;
   margin-bottom: 94px;
  
- background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
- background-image: url(../images/hero/Img.jpg); 
+ background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/Img.jpg); 
  background-repeat: no-repeat;
  background-position: center;
  background-size: cover;
