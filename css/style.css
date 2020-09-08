@@ -3,7 +3,7 @@
 *::after {
   margin: 0;
   padding: 0;
-  /* outline: 1px solid yellow; */
+  outline: 1px solid yellow;
 }
 
 img {display: block;}
@@ -86,24 +86,48 @@ align-items: center;
   padding: 0;
  }
 
- .navigation-list-item 
+.navigation-list-item 
  {width: max-content; }
 
-.navigation-list-item::after {
-content: "";
-width: 100%;
-height: 4px;
-background-color: var(--title-text-color);
-margin-top: 28px;
-display: block;
-}
-
-.navigation-list-item:hover::after, 
+/* .navigation-list-item:hover::after, 
 .navigation-list-item:focus::after {
 background-color: var(--accent-color);
-cursor: pointer;}
+cursor: pointer;} */
 
+.header .link {
+  color: var(--title-text-color);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  padding: 14px 0;
+  position: relative;
+  } 
 
+  .link.current::after {
+    content: "";
+    width: 100%;
+    height: 4px;
+    background-color: var(--title-text-color);
+    margin-top: 28px;
+    display: block;
+    position: absolute;
+    /* bottom: 2px; */
+    left: 0px;
+    right: 0px;
+    }
+
+  .header .link:hover,
+  .header .link:focus {color: var(--accent-color);}
+
+  .link.current:hover::after {color: var(--accent-color);}
+          
+  
+  .header .link.current {
+    color: var(--accent-color);}
+
+   
 
  /* ========== Logo ========== */ 
 
@@ -123,18 +147,7 @@ cursor: pointer;}
           
 .logo {display: flex;}
 
-.header .link {
-  color: var(--title-text-color);
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  text-decoration: none;
-  } 
-        
-  .header .link:hover,
-  .header .link:focus {color: var(--accent-color);}
-  .header .link .current {color: var(--accent-color);}
+
  
   /*=========== Контакты (header) ===========*/
 
@@ -201,11 +214,7 @@ cursor: pointer;}
 }
 
 
-
-  
-
-
-/* Стили для index.html */
+/* ============= Стили для index.html ================ */
 
 /* Герой */
 .hero-title {
@@ -245,7 +254,7 @@ cursor: pointer;}
   display: flex;
   min-height: 600px;
   max-width: 1600px;
-  padding-top: 50px;
+  /* padding-top: 50px; */
   padding-bottom: 50px;
   padding-right: 15px;
   padding-left: 15px;
@@ -355,7 +364,7 @@ background-image: url(../images/our_features/clock.svg)
   } 
 
 
-/* Чем мы занимаемся */
+/* ============ Чем мы занимаемся ================*/
 .section-wwd {
   margin-bottom: 94px;
   }
@@ -376,6 +385,34 @@ background-image: url(../images/our_features/clock.svg)
   .section-wwd-list-item:not(:last-child) {
     margin-right: 30px;
   }
+
+.section-wwd-list-item {
+  position: relative;
+}
+
+.box-title {
+  color: var(--primery-white-color);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.142;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;  
+}
+
+.box-img {
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+width: 370px;
+min-height: 70px;
+background-color: rgb(52, 53, 64, 80%);
+position: absolute;
+z-index: 1;
+bottom: 0;
+left: 0;
+}
 
 /* Наша команда */
 .section-team {
@@ -661,15 +698,11 @@ margin-bottom: 20px;
   margin-right: 8px;
 }
 
-/* Проекты */
+/* ============ Проекты ============*/
 
 .project-list-item .link {
   text-decoration: none;
  }
-
-/* .project-list-item {
-  border: 1px solid #EEEEEE;
-} */
 
 .project-list-item:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
@@ -689,7 +722,7 @@ margin-bottom: 20px;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.87;
-  margin-left: 24px;
+  margin-left: 24px;  
 }
 
 .project-list {
@@ -697,12 +730,37 @@ margin-bottom: 20px;
    flex-wrap: wrap;
  }
 
- .project-list-item:not(:nth-child(3n)) {
+.project-list-item:not(:nth-child(3n)) {
    margin-right: 30px;
  }
 
- .project-list-item:not(:nth-last-child(-n+3)) {
+.project-list-item:not(:nth-last-child(-n+3)) {
   margin-bottom: 30px;
 }
 
+.project-list-item {
+  position: relative;
+}
+
+.overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 24px 0 24px;
+  width: 100%;
+  height: 294px;
+  background-color: rgb(33, 150, 243, 90%);
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.overlay-title {
+font-weight: 400;
+font-size: 18px;
+line-height: 1.56;
+letter-spacing: 0.03em;
+color: var(--primery-white-color);
+}
 
