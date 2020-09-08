@@ -23,7 +23,7 @@ button {cursor: pointer;}
   --hero-footer-background-color: #2F303A
 }
 
-/* Основные стили для страниц */
+/* ========== Основные стили для страниц ========== */
 .body {
   background-color: #ffffff;
   color: var(--primery-text-color);
@@ -66,40 +66,46 @@ button {cursor: pointer;}
   display: flex;
   align-items: center;
 }
- .header .navigation {
+
+/* ========== Панель навигации =========== */
+
+.header .navigation {
 display: flex;
 align-items: center;
  }
 
- .navigation-list 
+.navigation-list 
 {display: flex;
   }
 
- .navigation-list-item:not(:last-child) {
+.navigation-list-item:not(:last-child) {
   margin-right: 50px;
  }
 
- .navigation-list-item {
-   width: max-content;
-   }
+.navigation-list-item .link {
+  padding: 0;
+ }
 
-  /* .navigation-list-item::after {
-  content: "";
-  width: 100%;
-  height: 4px;
-  background-color: var(--title-text-color);
-  margin-top: 28px;
-  display: block;
+ .navigation-list-item 
+ {width: max-content; }
+
+.navigation-list-item::after {
+content: "";
+width: 100%;
+height: 4px;
+background-color: var(--title-text-color);
+margin-top: 28px;
+display: block;
 }
 
 .navigation-list-item:hover::after, 
-.navigation-list-item:focus::after
+.navigation-list-item:focus::after {
 background-color: var(--accent-color);
-  cursor: pointer; */
+cursor: pointer;}
 
 
 
-          /* Logo */ 
+ /* ========== Logo ========== */ 
 
 .logo {
   margin-right: 93px;
@@ -196,87 +202,7 @@ background-color: var(--accent-color);
 
 
 
-  /* ========== Футер ========= */
-.footer .logo {
-  color: var(--primery-white-color);
-  font-family: Raleway;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
-  text-decoration: none;
-  margin: 0 0 20px;
-}
-
-.footer .logo > span {
-  color: var(--accent-color);
-}
- 
-.address-map {
-color: var(--primery-white-color);  
-font-weight: 400;
-font-size: 14px;
-line-height: 1.71;
-letter-spacing: 0.03em;
-text-decoration: none;
-margin-bottom: 9px;
-}
-
-.footer-contact .link,
-.footer-contact .phone {
-    color: var(--primery-text-color);
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.71;
-    letter-spacing: 0.03em;
-    text-decoration: none;
-  }
- 
-.footer-contact .link:hover,
-.footer-contact .phone:hover,
-.footer-contact .link:focus,
-.footer-contact .phone:focus {color: var(--accent-color)}
-
-.footer {
-  padding-top: 60px;
-  padding-bottom: 60px;
-}
-
-.footer .conteiner {
-  display: flex;
-  margin-left: auto;
-  } 
-
- .footer-contact-info {
-   margin-right: 70px;
- } 
-
-.address {
-  display: flex;
-  flex-direction: column;
-}
-.footer-contact {
-  display: flex;
-  flex-direction: column;
-}
-
-.footer-contact-item:not(:last-child) {
-  margin-bottom: 9px;
-}
-
-.footer {
-  background-color: var(--hero-footer-background-color);
-}
-
-.footer-social-title {
-font-weight: 400;
-font-size: 14px;
-line-height: 1.142;
-letter-spacing: 0.03em;
-text-transform: uppercase;
-color: #FFFFFF;
-margin-bottom: 20px;
-}
-
+  
 
 
 /* Стили для index.html */
@@ -590,6 +516,86 @@ fill: #AFB1B8;
   border: 1px solid var(--accent-color)
 }
 
+/* ========== Футер ========= */
+.footer .logo {
+  color: var(--primery-white-color);
+  font-family: Raleway;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  text-decoration: none;
+  margin: 0 0 20px;
+}
+
+.footer .logo > span {
+  color: var(--accent-color);
+}
+ 
+.address-map {
+color: var(--primery-white-color);  
+font-weight: 400;
+font-size: 14px;
+line-height: 1.71;
+letter-spacing: 0.03em;
+text-decoration: none;
+margin-bottom: 9px;
+}
+
+.footer-contact .link,
+.footer-contact .phone {
+  color: var(--primery-text-color);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+}
+ 
+.footer-contact .link:hover,
+.footer-contact .phone:hover,
+.footer-contact .link:focus,
+.footer-contact .phone:focus {color: var(--accent-color)}
+
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.footer .conteiner {
+  display: flex;
+  margin-left: auto;
+  } 
+
+ .footer-contact-info {
+   margin-right: 70px;
+ } 
+
+.address {
+  display: flex;
+  flex-direction: column;
+}
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-contact-item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.footer {
+  background-color: var(--hero-footer-background-color);
+}
+
+.footer-social-title {
+font-weight: 400;
+font-size: 14px;
+line-height: 1.142;
+letter-spacing: 0.03em;
+text-transform: uppercase;
+color: #FFFFFF;
+margin-bottom: 20px;
+}
 
 
 
@@ -605,7 +611,8 @@ fill: #AFB1B8;
 
 
 
-/* Стили для portfolio.html */
+
+/* ================= Стили для portfolio.html ===================*/
 
 /* Портфолио */
 .portfolio {
